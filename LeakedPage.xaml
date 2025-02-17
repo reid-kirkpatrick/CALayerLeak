@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="CALayerLeak.LeakedPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CALayerLeak"
+             Title="LeakedPage"
+             x:DataType="local:LeakedViewModel">
+	<ScrollView>
+		<VerticalStackLayout Margin="16"
+		                     BindableLayout.ItemsSource="{Binding Items}"
+		                     Spacing="16">
+			<BindableLayout.ItemTemplate>
+				<DataTemplate>
+					<local:ItemView />
+				</DataTemplate>
+			</BindableLayout.ItemTemplate>
+		</VerticalStackLayout>
+	</ScrollView>
+</ContentPage>
